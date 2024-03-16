@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
     min-height: 100vh;
     display: flex;
@@ -13,13 +14,20 @@ body {
     justify-content: center;
     background: rgb(0,255,248);
     background: linear-gradient(0deg, rgba(0,255,248,1) 0%, rgba(244,244,244,1) 100%);
+.logo{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding: 1.3rem;}
 }
+.logo>img{ width: 30%; height: auto;}
 .container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
+
+    width: 40rem;
+    height:auto;
+
     background:#8c52ff;
-    padding: 30px;
+   padding: 1.3rem;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -27,9 +35,7 @@ body {
 
 .heading {
     text-align: center;
-    font-size: 40px;
-    color: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 label {
     display: block;
@@ -61,7 +67,7 @@ select {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 30px;
+
 }
 .timer .progress {
     position: relative;
@@ -78,7 +84,7 @@ select {
     height: 100%;
     border-radius: 30px;
     overflow: hidden;
-    background: linear-gradient(to right, #ea517c, #b478f1);
+    background: linear-gradient(to right, #eadd51, #facd1f);
     transition: 1s linear;
 }
 .timer .progress .progress-text {
@@ -92,14 +98,14 @@ select {
 }
 
 .question-wrapper .number {
-    color: #a2aace;
-    font-size: 25px;
+    color: #ffffff;
+    font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 20px;
+
 }
 .question-wrapper .number .total {
-    color: #576081;
-    font-size: 18px;
+    color: #2d2d2d;
+    font-size: 1.2rem;
 }
 .question-wrapper .question {
     color: #fff;
@@ -195,10 +201,14 @@ select {
     margin-bottom: 120px;
 }
 
-@media (max-width: 468px) {
+@media screen and (max-width: 400px) {
+    .logo{
+        display: none;
+    }
+
     .container {
         min-height: 100vh;
-        max-width: 100%;
+        width: 100vw;
         border-radius: 0;
     }
 }

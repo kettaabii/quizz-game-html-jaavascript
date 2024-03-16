@@ -13,7 +13,8 @@ const startBtn = document.querySelector(".start"),
     difficulty = document.querySelector("#difficulty"),
     timePerQuestion = document.querySelector("#time"),
     quiz = document.querySelector(".quiz"),
-    startScreen = document.querySelector(".start-screen");
+    startScreen = document.querySelector(".start-screen")
+    ;
 
 let questions = [],
     time = 30,
@@ -35,6 +36,7 @@ const questionsData = [
 ];
 
 const startQuiz = () => {
+    logoContainer.style.display = 'none';
     const num = numQuestions.value;
     loadingAnimation();
     questions = questionsData.slice(0, num); // Sélectionnez le nombre de questions requis
@@ -96,9 +98,7 @@ const showQuestion = (question) => {
 
 const startTimer = (time) => {
     timer = setInterval(() => {
-        if (time === 3) {
-            playAdudio("countdown.mp3");
-        }
+
         if (time >= 0) {
             progress(time);
             time--;
@@ -207,7 +207,3 @@ restartBtn.addEventListener("click", () => {
     window.location.reload();
 });
 
-const playAdudio = (src) => {
-    const audio = new Audio(src);
-    audio.play();
-};
