@@ -9,8 +9,6 @@ const progress = (value) => {
 
 const startBtn = document.querySelector(".start"),
     numQuestions = document.querySelector("#num-questions"),
-    category = document.querySelector("#category"),
-    difficulty = document.querySelector("#difficulty"),
     timePerQuestion = document.querySelector("#time"),
     quiz = document.querySelector(".quiz"),
     startScreen = document.querySelector(".start-screen")
@@ -23,16 +21,47 @@ let questions = [],
     timer;
 const questionsData = [
     {
-        question: "Votre question 1 ici?",
-        correct_answer: "Réponse correcte 1",
-        incorrect_answers: ["Réponse incorrecte 1", "Réponse incorrecte 2", "Réponse incorrecte 3"]
+        question: "Quelle est la capitale du Senegal ?",
+        correct_answer: "Dakar",
+        incorrect_answers: ["Bamaku", "Nouadibu", "Dar Salam"]
     },
     {
-        question: "Votre question 2 ici?",
-        correct_answer: "Réponse correcte 2",
-        incorrect_answers: ["Réponse incorrecte 1", "Réponse incorrecte 2", "Réponse incorrecte 3"]
+        question: "Quel est le rôle principal d'un serveur web ??",
+        correct_answer: " Fournir des ressources réseau aux clients",
+        incorrect_answers: [" Stocker des données", "Exécuter des applications", "Contrôler le matériel du système"]
     },
-    // Ajoutez autant de questions que nécessaire
+    {
+        question: "Qu'est-ce que SQL ?",
+        correct_answer: "Structured Query Language",
+        incorrect_answers: ["Simple Query Language", "Server Query Language", "System Query Language"]
+    },
+    {
+        question: "VQu'est-ce que le \"cloud computing\" ?",
+        correct_answer: "Un modèle d'accès à distance aux ressources informatiques",
+        incorrect_answers: [" Un type de réseau social", "Un logiciel de gestion de projet", "Un service de stockage en ligne"]
+    },
+    {
+        question: "Quelle est la fonction principale de Git ?",
+        correct_answer: "Suivre les changements dans les fichiers et les codes source",
+        incorrect_answers: ["Gérer les bases de données", "Créer des interfaces utilisateur graphiques", " Effectuer des requêtes HTTP"]
+    },
+    {
+        question: "Quelle est la fonction principale de JavaScript ?",
+        correct_answer: "Ajouter des fonctionnalités interactives et dynamiques aux pages web",
+        incorrect_answers: ["Manipuler et contrôler la structure des pages web", " Styler et formater le contenu des pages web", " Définir la mise en page et la disposition des éléments sur les pages web"]
+    },
+    {
+        question: "Quelle est la signification de CSS ?",
+        correct_answer: "Cascading Style Sheets",
+        incorrect_answers: ["Creative Style Sheets", " Computer Style Sheets", " Colorful Style Sheets"]
+    },
+    {
+        question: "Quel langage de programmation est utilisé pour créer des pages web dynamiques ?",
+        correct_answer: "JavaScript",
+        incorrect_answers: [" Python", " CSS", "  HTML"]
+    },
+
+
 ];
 
 const startQuiz = () => {
